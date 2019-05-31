@@ -12,6 +12,6 @@ then
   mv $HOME/.tmux.conf $HOME/.tmux.conf.back
 fi
 
-ln -s $HOME/.tmux/.tmux.conf $HOME/.tmux.conf
+ln -s ./.tmux.conf $HOME/.tmux.conf
 
 tmux source-file ~/.tmux.conf
