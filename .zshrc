@@ -1,4 +1,4 @@
-export ZSH="/Users/yechen.li/.oh-my-zsh"
+export ZSH="/home/haduluoke/.oh-my-zsh"
 
 ZSH_THEME="lyc-fox"
 
@@ -13,17 +13,12 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # PATH
-export PATH=/Users/yechen.li/go/bin:$PATH
-export PATH=/usr/local/opt/llvm/bin:$PATH
-export PATH=/Users/yechen.li/Library/Python/3.8/bin:$PATH
+# export PATH=/Users/yechen.li/go/bin:$PATH
+# export PATH=/usr/local/opt/llvm/bin:$PATH
+# export PATH=/Users/yechen.li/Library/Python/3.8/bin:$PATH
 
 # GOPATH
-export GOPATH=/Users/yechen.li/go
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
+# export GOPATH=/Users/yechen.li/go
 
 # alias
 alias zshconfig="nvim ~/.zshrc"
@@ -48,7 +43,7 @@ alias ll="exa -hl"
 alias la="exa -hla"
 
 # common lisp
-alias run_vlime_server="sbcl --load ~/.local/share/nvim/plugins/vlime/lisp/start-vlime.lisp"
+# alias run_vlime_server="sbcl --load ~/.local/share/nvim/plugins/vlime/lisp/start-vlime.lisp"
 
 # ssh
 alias sshlist="cat ~/.ssh/config | grep 'Host ' -A 1"
@@ -57,7 +52,16 @@ alias sshlist="cat ~/.ssh/config | grep 'Host ' -A 1"
 export LS_COLORS='di=0;36:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=0;32:*.rpm=0:*.tar=0;31'
 
 # rust
-source "$HOME/.cargo/env"
+# source "$HOME/.cargo/env"
+
+# nvm
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+export TERM=linuE437: terminal capability "cm" requiredx
+
+# docker
+
 
 # ===== garena =====
 # change fd to 12800
